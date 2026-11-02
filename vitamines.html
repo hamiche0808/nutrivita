@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Guide des vitamines — NutriVita</title>
+
+    <meta name="description"
+          content="Guide des vitamines A, B1, B2, B3, B5, B6, B9, B12, C, D, E et K : leurs rôles pour la santé et les 50 fruits et légumes qui en contiennent.">
+
+    <link rel="canonical" href="https://hamiche0808.github.io/nutrivita/vitamines.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NutriVita">
+    <meta property="og:title" content="Guide des vitamines — NutriVita">
+    <meta property="og:description"
+          content="Vitamines A, B, C, D, E, K : rôles, bienfaits et aliments qui en contiennent.">
+    <meta property="og:image" content="https://hamiche0808.github.io/nutrivita/assets/og-image.jpg">
+    <meta property="og:url" content="https://hamiche0808.github.io/nutrivita/vitamines.html">
+    <meta property="og:locale" content="fr_FR">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Guide des vitamines — NutriVita">
+    <meta name="twitter:description"
+          content="Vitamines A, B, C, D, E, K : rôles, bienfaits et aliments qui en contiennent.">
+    <meta name="twitter:image" content="https://hamiche0808.github.io/nutrivita/assets/og-image.jpg">
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <meta name="theme-color" content="#2f6b45">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js"></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header class="site-header">
+
+        <div class="nav-content">
+
+            <a class="brand" href="index.html">
+
+                <span class="brand-icon">🌿</span>
+
+                <div>
+
+                    <h1>NutriVita</h1>
+
+                    <p>Votre guide naturel des vitamines</p>
+
+                </div>
+
+            </a>
+
+            <nav class="site-nav" aria-label="Navigation principale">
+
+                <a href="index.html">Accueil</a>
+
+                <a class="current" href="vitamines.html">Guide des vitamines</a>
+
+                <a href="a-propos.html">À propos</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <span class="hero-emoji">📚</span>
+
+            <h2>
+                <span class="highlight">Le rôle des vitamines</span>
+                pour votre organisme
+            </h2>
+
+            <p>
+                Chaque vitamine joue un rôle spécifique dans le fonctionnement
+                de notre organisme. Cliquez sur « Voir les aliments » pour
+                filtrer la liste des 50 fruits et légumes recensés
+                sur NutriVita.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ALIMENTS (filtrable) -->
+
+    <section class="section container" id="explorer">
+
+        <div class="filters">
+
+            <div class="search-box">
+
+                <span class="search-icon">🔍</span>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Rechercher un aliment..."
+                    aria-label="Rechercher un aliment"
+                >
+
+            </div>
+
+
+            <div class="filter-row">
+
+                <span class="filter-label">
+                    CATÉGORIE :
+                </span>
+
+                <button class="filter-btn active" data-category="Tous">
+                    Tout
+                </button>
+
+                <button class="filter-btn" data-category="Fruit">
+                    🍎 Fruits
+                </button>
+
+                <button class="filter-btn" data-category="Légume">
+                    🥦 Légumes
+                </button>
+
+            </div>
+
+
+            <div class="filter-row vitamin-filters">
+
+                <span class="filter-label">
+                    VITAMINE SÉLECTIONNÉE :
+                </span>
+
+                <button class="filter-btn active" data-vitamin="Toutes">
+                    Toutes
+                </button>
+
+                <div id="vitaminFilterButtons" class="filter-row"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="results-bar">
+
+            <h2>🥗 Aliments correspondants</h2>
+
+            <span class="result-count" id="resultCount">50 aliments</span>
+
+        </div>
+
+
+        <div class="food-grid" id="foodGrid"></div>
+
+
+        <div class="empty-state" id="emptyState">
+
+            <div class="emoji">🥕</div>
+
+            <h3>Aucun aliment trouvé</h3>
+
+            <p>
+                Essaie une autre recherche ou modifie tes filtres.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- GUIDE COMPLET -->
+
+    <section
+        class="section container"
+        id="vitaminGuideSection"
+    >
+
+        <div class="section-heading">
+
+            <h2>💊 Les 12 vitamines référencées</h2>
+
+            <span
+                class="result-count"
+                id="totalVitamins"
+            >
+                12
+            </span>
+
+        </div>
+
+        <p class="section-sub">
+            Les allégations présentées correspondent aux allégations
+            autorisées par l'Autorité européenne de sécurité des aliments
+            (EFSA). Cliquez sur une carte pour la mettre en évidence,
+            ou sur « Voir les aliments » pour filtrer la liste ci-dessus.
+        </p>
+
+        <div class="vitamin-grid" id="vitaminGrid"></div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <span class="brand-icon">🌿</span>
+
+        <p>
+            <strong>
+                NutriVita — Mangez sainement, vivez naturellement
+            </strong>
+        </p>
+
+        <p style="opacity: 0.65; font-size: 12.5px; margin-bottom: 10px;">
+            ✦ Site conçu et réalisé par
+            <strong style="opacity: 1;">BEN MESLI Hamiche</strong> ✦
+        </p>
+
+        <p>
+            Les informations présentées sont destinées à l'éducation
+            nutritionnelle. Cette application ne remplace pas un avis
+            médical ou nutritionnel personnalisé.
+        </p>
+
+        <nav class="footer-nav">
+
+            <a href="index.html">Accueil</a>
+
+            <a href="vitamines.html">Vitamines</a>
+
+            <a href="a-propos.html">À propos</a>
+
+            <a href="mentions-legales.html">Mentions légales</a>
+
+        </nav>
+
+    </footer>
+
+
+    <!-- MODALE -->
+
+    <div
+        class="modal"
+        id="foodModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+    >
+
+        <div class="modal-content">
+
+            <button
+                class="modal-close"
+                id="modalClose"
+                aria-label="Fermer"
+            >
+                ×
+            </button>
+
+            <div class="modal-header">
+
+                <span class="modal-emoji" id="modalEmoji">🍎</span>
+
+                <h2 id="modalTitle">Aliment</h2>
+
+            </div>
+
+            <div class="modal-body">
+
+                <h3>🌱 Présentation</h3>
+
+                <p id="modalDescription"></p>
+
+
+                <h3>💚 Bienfaits nutritionnels</h3>
+
+                <ul class="benefit-list" id="modalBenefits"></ul>
+
+
+                <h3 style="margin-top: 25px;">
+                    💊 Vitamines principales
+                </h3>
+
+                <div class="modal-vitamin-tags" id="modalVitamins"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

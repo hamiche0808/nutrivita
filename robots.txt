@@ -1,0 +1,9 @@
+# Autoriser tous les robots d'indexation
+User-agent: *
+Allow: /
+
+# Ne pas indexer les mentions légales
+Disallow: /mentions-legales.html
+
+# Emplacement du plan du site
+Sitemap: https://hamiche0808.github.io/nutrivita/sitemap.xml

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>NutriVita OG</title>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+        background: #333;
+        font-family: "Segoe UI", Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .og {
+        width: 1200px;
+        height: 630px;
+        position: relative;
+        overflow: hidden;
+
+        background:
+            radial-gradient(900px 500px at 110% -10%, rgba(242, 158, 56, 0.25), transparent 60%),
+            radial-gradient(800px 600px at -10% 110%, rgba(255, 255, 255, 0.12), transparent 60%),
+            linear-gradient(135deg, #204c32 0%, #2f6b45 55%, #3d7a54 100%);
+
+        display: flex;
+        align-items: center;
+        padding: 0 90px;
+        color: white;
+    }
+
+    .og::before,
+    .og::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .og::before {
+        width: 420px;
+        height: 420px;
+        right: -140px;
+        top: -140px;
+    }
+
+    .og::after {
+        width: 620px;
+        height: 620px;
+        right: -230px;
+        top: -230px;
+    }
+
+    .fruits {
+        position: absolute;
+        right: 70px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px 34px;
+
+        font-size: 84px;
+        filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.25));
+    }
+
+    .fruits span {
+        display: flex;
+        justify-content: center;
+    }
+
+    .content {
+        position: relative;
+        z-index: 2;
+        max-width: 640px;
+    }
+
+    .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+
+        padding: 10px 18px;
+        border-radius: 30px;
+
+        background: rgba(255, 255, 255, 0.14);
+        border: 1px solid rgba(255, 255, 255, 0.22);
+
+        font-size: 21px;
+        font-weight: 600;
+        margin-bottom: 34px;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 16px;
+    }
+
+    .brand-icon {
+        width: 84px;
+        height: 84px;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 48px;
+    }
+
+    .brand h1 {
+        font-size: 76px;
+        font-weight: 800;
+        letter-spacing: -1px;
+    }
+
+    .brand h1 em {
+        font-style: normal;
+        color: #f9c46b;
+    }
+
+    .tagline {
+        font-size: 33px;
+        line-height: 1.35;
+        font-weight: 300;
+        opacity: 0.94;
+        margin-bottom: 30px;
+    }
+
+    .tagline strong {
+        font-weight: 700;
+    }
+
+    .chips {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .chip {
+        padding: 10px 20px;
+        border-radius: 30px;
+        font-size: 20px;
+        font-weight: 600;
+
+        background: rgba(255, 255, 255, 0.92);
+        color: #2f6b45;
+    }
+
+    .chip.alt {
+        background: #f29e38;
+        color: #3a2a10;
+    }
+</style>
+</head>
+<body>
+
+    <div class="og">
+        <div class="fruits">
+            <span>🍊</span><span>🥕</span><span>🥦</span>
+            <span>🍎</span><span>🍌</span><span>🥑</span>
+            <span>🍓</span><span>🥬</span><span>🍅</span>
+        </div>
+
+        <div class="content">
+            <div class="badge">🌿 Nutrition &amp; Bien-être</div>
+
+            <div class="brand">
+                <div class="brand-icon">🥬</div>
+                <h1>Nutri<em>Vita</em></h1>
+            </div>
+
+            <p class="tagline">
+                Le guide des <strong>vitamines</strong> des
+                <strong>fruits &amp; légumes</strong> pour votre santé.
+            </p>
+
+            <div class="chips">
+                <span class="chip">50 aliments</span>
+                <span class="chip alt">12 vitamines</span>
+                <span class="chip">100 % gratuit</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

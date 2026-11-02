@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>À propos & Contact — NutriVita</title>
+
+    <meta name="description"
+          content="Découvrez NutriVita : un projet éducatif sur les vitamines des fruits et légumes. Contactez-nous pour vos questions et suggestions.">
+
+    <link rel="canonical" href="https://hamiche0808.github.io/nutrivita/a-propos.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="NutriVita">
+    <meta property="og:title" content="À propos & Contact — NutriVita">
+    <meta property="og:description"
+          content="Un projet éducatif sur les vitamines des fruits et légumes.">
+    <meta property="og:image" content="https://hamiche0808.github.io/nutrivita/assets/og-image.jpg">
+    <meta property="og:url" content="https://hamiche0808.github.io/nutrivita/a-propos.html">
+    <meta property="og:locale" content="fr_FR">
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <meta name="theme-color" content="#2f6b45">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/data.js"></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <header class="site-header">
+
+        <div class="nav-content">
+
+            <a class="brand" href="index.html">
+
+                <span class="brand-icon">🌿</span>
+
+                <div>
+
+                    <h1>NutriVita</h1>
+
+                    <p>Votre guide naturel des vitamines</p>
+
+                </div>
+
+            </a>
+
+            <nav class="site-nav" aria-label="Navigation principale">
+
+                <a href="index.html">Accueil</a>
+
+                <a href="vitamines.html">Guide des vitamines</a>
+
+                <a class="current" href="a-propos.html">À propos</a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <span class="hero-emoji">🌱</span>
+
+            <h2>
+                À propos de <span class="highlight">NutriVita</span>
+            </h2>
+
+            <p>
+                Un guide <strong>gratuit et accessible</strong> pour mieux
+                comprendre les vitamines que la nature met dans notre assiette.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <main class="container section">
+
+        <!-- NOTRE MISSION -->
+
+        <div class="page-content">
+
+            <h2>🎯 Notre mission</h2>
+
+            <p>
+                NutriVita est né d'une idée simple : rendre la nutrition
+                lisible pour tout le monde. Entre l'étiquetage, les modes et
+                les discours contradictoires, difficile de savoir quels
+                aliments choisir. Ce site rassemble l'essentiel : quelles
+                vitamines contiennent les 50 fruits et légumes les plus
+                courants, et à quoi elles servent.
+            </p>
+
+            <h2>✨ Qui réalise ce site ?</h2>
+
+            <p>
+                NutriVita est un site <strong>conçu et réalisé par
+                <strong>BEN MESLI Hamiche</strong></strong>, passionné
+                par le développement web et la nutrition.
+                Le projet combine design, contenu pédagogique
+                et technologies web modernes (HTML5, CSS3, JavaScript),
+                fidèle à son état d'esprit : simple, sain et naturel.
+            </p>
+
+            <h2>🧪 Comment sont construites les fiches ?</h2>
+
+            <ul>
+                <li>
+                    Les vitamines listées correspondent aux principales
+                    vitamines présentes dans chaque aliment.
+                </li>
+                <li>
+                    Les bienfaits mentionnés s'appuient sur les allégations
+                    fonctionnelles autorisées par l'Autorité européenne de
+                    sécurité des aliments (EFSA).
+                </li>
+                <li>
+                    Les quantités varient selon la variété, la maturité,
+                    la conservation et le mode de préparation.
+                </li>
+            </ul>
+
+            <h2>⚠️ Limites importantes</h2>
+
+            <ul>
+                <li>
+                    NutriVita est un outil <strong>éducatif</strong> :
+                    il ne remplace pas un avis médical ou diététique
+                    personnalisé.
+                </li>
+                <li>
+                    En cas de pathologie, de grossesse ou de régime
+                    spécifique, consultez un professionnel de santé.
+                </li>
+                <li>
+                    Vitamine B12 mise à part, un régime varié à base de
+                    fruits et légumes couvre la majorité des besoins en
+                    vitamines.
+                </li>
+            </ul>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="page-content" id="contact">
+
+            <h2>✉️ Nous contacter</h2>
+
+            <p>
+                Une question, une suggestion d'aliment à ajouter,
+                une correction à proposer ? Écrivez-nous directement à
+                <a href="mailto:hamiche08.08@gmail.com">hamiche08.08@gmail.com</a>
+                : le formulaire ci-dessous ouvrira votre logiciel de
+                messagerie avec le message pré-rempli.
+            </p>
+
+            <div class="mailto-form">
+
+                <label for="cName">Votre nom</label>
+                <input type="text" id="cName" placeholder="Ex. : Marie Dupont">
+
+                <label for="cSubject">Sujet</label>
+                <input
+                    type="text"
+                    id="cSubject"
+                    placeholder="Ex. : Suggestion d'ajout — Coing"
+                >
+
+                <label for="cMessage">Message</label>
+                <textarea
+                    id="cMessage"
+                    placeholder="Votre message..."
+                ></textarea>
+
+                <p style="margin-top: 14px;">
+                    <button
+                        class="btn btn-primary"
+                        type="button"
+                        id="cSend"
+                        style="width: 100%; border: none;"
+                    >
+                        ✉️ Envoyer le message
+                    </button>
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <span class="brand-icon">🌿</span>
+
+        <p>
+            <strong>
+                NutriVita — Mangez sainement, vivez naturellement
+            </strong>
+        </p>
+
+        <p style="opacity: 0.65; font-size: 12.5px; margin-bottom: 10px;">
+            ✦ Site conçu et réalisé par
+            <strong style="opacity: 1;">BEN MESLI Hamiche</strong> ✦
+        </p>
+
+        <p>
+            Les informations présentées sont destinées à l'éducation
+            nutritionnelle. Cette application ne remplace pas un avis
+            médical ou nutritionnel personnalisé.
+        </p>
+
+        <nav class="footer-nav">
+
+            <a href="index.html">Accueil</a>
+
+            <a href="vitamines.html">Vitamines</a>
+
+            <a href="a-propos.html">À propos</a>
+
+            <a href="mentions-legales.html">Mentions légales</a>
+
+        </nav>
+
+    </footer>
+
+
+    <!-- SCRIPT formulaire mailto (propre à cette page) -->
+
+    <script>
+        (function () {
+            var btn = document.getElementById("cSend");
+            if (!btn) {
+                return;
+            }
+
+            btn.addEventListener("click", function () {
+                var name = document.getElementById("cName").value.trim();
+                var subject = document.getElementById("cSubject").value.trim();
+                var message = document.getElementById("cMessage").value.trim();
+
+                if (!subject && !message) {
+                    alert("Merci de saisir au moins un sujet ou un message.");
+                    return;
+                }
+
+                var body = "Message envoyé depuis nutrivita : " + "\n\n" +
+                    message + "\n\n— " + (name || "Anonyme");
+
+                var url = "mailto:hamiche08.08@gmail.com" +
+                    "?subject=" + encodeURIComponent(
+                        subject || "Contact NutriVita"
+                    ) +
+                    "&body=" + encodeURIComponent(body);
+
+                window.location.href = url;
+            });
+        })();
+    </script>
+
+</body>
+
+</html>
