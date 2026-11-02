@@ -8,7 +8,7 @@ foods.push(
     {
         id: 51,
         name: "Lentilles vertes",
-        emoji: "🫘",
+        emoji: "🥣",
         category: "Légume sec",
         vitamins: ["B1", "B9", "B6"],
         description:
@@ -25,7 +25,7 @@ foods.push(
     {
         id: 52,
         name: "Lentilles corail",
-        emoji: "🫘",
+        emoji: "🍛",
         category: "Légume sec",
         vitamins: ["B1", "B9", "B6"],
         description:
@@ -42,7 +42,7 @@ foods.push(
     {
         id: 53,
         name: "Pois chiches",
-        emoji: "🫘",
+        emoji: "🌰",
         category: "Légume sec",
         vitamins: ["B6", "B9", "B5"],
         description:
@@ -76,7 +76,7 @@ foods.push(
     {
         id: 55,
         name: "Pois cassés",
-        emoji: "🫘",
+        emoji: "🍲",
         category: "Légume sec",
         vitamins: ["B1", "B9", "B6"],
         description:
@@ -93,7 +93,7 @@ foods.push(
     {
         id: 56,
         name: "Flageolets",
-        emoji: "🫘",
+        emoji: "🫒",
         category: "Légume sec",
         vitamins: ["B9", "B1", "B2"],
         description:
@@ -110,7 +110,7 @@ foods.push(
     {
         id: 57,
         name: "Fèves",
-        emoji: "🫘",
+        emoji: "🫛",
         category: "Légume sec",
         vitamins: ["B9", "K", "B1"],
         description:
@@ -127,7 +127,7 @@ foods.push(
     {
         id: 58,
         name: "Haricots blancs",
-        emoji: "🫘",
+        emoji: "🍚",
         category: "Légume sec",
         vitamins: ["B9", "B1", "B6"],
         description:
