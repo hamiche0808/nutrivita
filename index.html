@@ -38,7 +38,10 @@
 
     <!-- Styles et scripts -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/associations.css">
     <script src="js/data.js"></script>
+    <script src="js/data-legumes-secs.js"></script>
+    <script src="js/associations.js"></script>
     <script src="js/main.js" defer></script>
 
     <!-- Données structurées (SEO) -->
@@ -135,7 +138,7 @@
 
         <div class="stat-card">
 
-            <strong id="totalFoods">50</strong>
+            <strong id="totalFoods">58</strong>
 
             <span>Fruits et légumes</span>
 
@@ -151,7 +154,7 @@
 
         <div class="stat-card">
 
-            <strong id="totalResults">50</strong>
+            <strong id="totalResults">58</strong>
 
             <span>Aliments affichés</span>
 
@@ -202,6 +205,10 @@
                         🥦 Légumes
                     </button>
 
+                    <button class="filter-btn" data-category="Légume sec">
+                        🫘 Légumes secs
+                    </button>
+
                 </div>
 
 
@@ -228,7 +235,7 @@
 
                 <h2>🍏 Fruits &amp; Légumes</h2>
 
-                <span class="result-count" id="resultCount">50 aliments</span>
+                <span class="result-count" id="resultCount">58 aliments</span>
 
             </div>
 
@@ -272,6 +279,65 @@
             </p>
 
             <div class="vitamin-grid" id="vitaminGrid"></div>
+
+        </section>
+
+
+                <!-- GUIDE DES ASSOCIATIONS -->
+
+        <section
+            class="section container"
+            id="associations"
+        >
+
+            <div class="section-heading">
+
+                <h2>🔄 Bien associer pour mieux absorber</h2>
+
+            </div>
+
+            <p class="section-sub assoc-intro">
+                Le secret d'une bonne nutrition ne réside pas seulement
+                dans le choix des aliments, mais aussi dans leur
+                association. Voici les duos de fruits et légumes qui
+                améliorent l'absorption des vitamines, et les combinaisons
+                à éviter ou à espacer dans le temps.
+            </p>
+
+
+            <div class="assoc-block-title">
+
+                <h3>✅ Les associations qui boostent l'absorption</h3>
+
+            </div>
+
+            <p class="assoc-block-sub">
+                Un badge vert ✓ signale un duo gagnant à adopter au
+                quotidien.
+            </p>
+
+            <div class="assoc-grid" id="assocGoodGrid"></div>
+
+
+            <div class="assoc-block-title warn">
+
+                <h3>⚠️ Les associations à éviter (ou à espacer)</h3>
+
+            </div>
+
+            <p class="assoc-block-sub">
+                Un point d'exclamation rouge <strong>!</strong> signale
+                une gêne d'absorption des vitamines.
+            </p>
+
+            <div class="assoc-grid" id="assocWarnGrid"></div>
+
+
+            <div class="assoc-legend">
+                ℹ️ Ces conseils relèvent de la nutrition générale.
+                Ils ne remplacent en aucun cas un avis médical
+                personnalisé.
+            </div>
 
         </section>
 
@@ -385,6 +451,8 @@
                 </h3>
 
                 <div class="modal-vitamin-tags" id="modalVitamins"></div>
+
+                <div class="modal-associations" id="modalAssociations" style="display: none;"></div>
 
             </div>
 

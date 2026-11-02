@@ -1,0 +1,186 @@
+/* =========================================================
+   NutriVita v1.1 — Guide des associations
+   ✅ Synergies (vert) / ⚠️ Incompatibilités (rouge)
+========================================================= */
+
+.assoc-intro {
+    color: var(--text-light);
+    max-width: 760px;
+    margin-bottom: 22px;
+}
+
+.assoc-block-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0 6px;
+}
+
+.assoc-block-title h3 {
+    font-size: 19px;
+    color: var(--green-dark);
+}
+
+.assoc-block-title.warn h3 {
+    color: #8f3b3b;
+}
+
+.assoc-block-sub {
+    color: var(--text-light);
+    font-size: 13.5px;
+    margin-bottom: 16px;
+}
+
+.assoc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.assoc-card {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    border-left: 6px solid var(--green);
+    box-shadow: var(--shadow);
+    padding: 18px 18px 16px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.assoc-card:hover {
+    transform: translateY(-3px);
+}
+
+.assoc-card.good {
+    border-left-color: var(--green);
+    background: linear-gradient(180deg, #ffffff, #f2faf1);
+}
+
+.assoc-card.warn {
+    border-left-color: #e5484d;
+    background: linear-gradient(180deg, #ffffff, #fff8f6);
+}
+
+.assoc-badge {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: 800;
+    color: white;
+    background: var(--green);
+}
+
+.assoc-card.warn .assoc-badge {
+    background: #e5484d;
+    box-shadow: 0 0 0 6px rgba(229, 72, 77, 0.12);
+    animation: pulse 2.2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 4px rgba(229, 72, 77, 0.10); }
+    50% { box-shadow: 0 0 0 9px rgba(229, 72, 77, 0.16); }
+    100% { box-shadow: 0 0 0 4px rgba(229, 72, 77, 0.10); }
+}
+
+.assoc-card.good .assoc-badge {
+    box-shadow: 0 0 0 6px rgba(47, 107, 69, 0.10);
+}
+
+.assoc-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.assoc-pair {
+    font-size: 15.5px;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.assoc-card.warn .assoc-pair {
+    color: #8f3b3b;
+}
+
+.assoc-why {
+    color: var(--text-light);
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.assoc-chip {
+    display: inline-block;
+    margin-top: 9px;
+    padding: 4px 11px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    background: var(--green-light);
+    color: var(--green);
+}
+
+.assoc-card.warn .assoc-chip {
+    background: #fdecec;
+    color: #b3261e;
+}
+
+/* Cartes d'association dans la modale */
+
+.modal-associations h4 {
+    margin: 18px 0 6px;
+    font-size: 15px;
+}
+
+.modal-association-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+
+    padding: 12px 14px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    font-size: 13.5px;
+    line-height: 1.5;
+}
+
+.modal-association-item.good {
+    background: var(--green-light);
+    color: var(--text);
+}
+
+.modal-association-item.warn {
+    background: #fdefee;
+    color: #7c3030;
+}
+
+.modal-association-item .icon {
+    font-size: 17px;
+    font-weight: 800;
+}
+
+/* Légende sous la section */
+
+.assoc-legend {
+    margin-top: 18px;
+    padding: 14px 18px;
+    background: white;
+    border: 1px dashed var(--border);
+    border-radius: 12px;
+    color: var(--text-light);
+    font-size: 13px;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .assoc-grid {
+        grid-template-columns: 1fr;
+    }
+}

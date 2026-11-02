@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -31,7 +31,10 @@
     <meta name="theme-color" content="#2f6b45">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/associations.css">
     <script src="js/data.js"></script>
+    <script src="js/data-legumes-secs.js"></script>
+    <script src="js/associations.js"></script>
     <script src="js/main.js" defer></script>
 </head>
 
@@ -88,8 +91,8 @@
             <p>
                 Chaque vitamine joue un rôle spécifique dans le fonctionnement
                 de notre organisme. Cliquez sur « Voir les aliments » pour
-                filtrer la liste des 50 fruits et légumes recensés
-                sur NutriVita.
+                filtrer la liste des 58 fruits, légumes et légumes secs
+                recensés sur NutriVita.
             </p>
 
         </div>
@@ -135,6 +138,10 @@
                     🥦 Légumes
                 </button>
 
+                <button class="filter-btn" data-category="Légume sec">
+                    🫘 Légumes secs
+                </button>
+
             </div>
 
 
@@ -159,7 +166,7 @@
 
             <h2>🥗 Aliments correspondants</h2>
 
-            <span class="result-count" id="resultCount">50 aliments</span>
+            <span class="result-count" id="resultCount">58 aliments</span>
 
         </div>
 
@@ -297,6 +304,8 @@
                 </h3>
 
                 <div class="modal-vitamin-tags" id="modalVitamins"></div>
+
+                <div class="modal-associations" id="modalAssociations" style="display: none;"></div>
 
             </div>
 

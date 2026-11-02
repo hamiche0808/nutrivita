@@ -159,6 +159,8 @@ function openModal(foodId) {
     $$("modalVitamins").innerHTML = food.vitamins
         .map(v => `<span class="vitamin-tag">${v}</span>`).join("");
 
+    renderFoodAssociations(food);
+
     modal.classList.add("open");
 }
 
@@ -225,6 +227,114 @@ function renderVitaminGuide() {
     });
 }
 
+/* ---------- GUIDE DES ASSOCIATIONS ---------- */
+
+function getFoodAssociations(foodName) {
+
+    const good = (typeof synergies !== "undefined")
+        ? synergies.filter(s => s.matches.includes(foodName))
+        : [];
+
+    const warn = (typeof warnings !== "undefined")
+        ? warnings.filter(w => w.matches.includes(foodName))
+        : [];
+
+    return { good, warn };
+}
+
+function assocCardHTML(item, type) {
+
+    const badge = type === "good" ? "✓" : "!";
+    const cls = type === "good" ? "good" : "warn";
+
+    return `
+        <div class="assoc-badge">${badge}</div>
+
+        <div class="assoc-content">
+            <div class="assoc-pair">
+                ${item.a} + ${item.b}
+            </div>
+
+            <p class="assoc-why">${item.why}</p>
+
+            <span class="assoc-chip">
+                ${type === "good" ? "✅" : "⚠️"} ${item.tag}
+            </span>
+        </div>
+    `;
+}
+
+function renderAssociations() {
+
+    const goodGrid = $$("assocGoodGrid");
+    const warnGrid = $$("assocWarnGrid");
+
+    if (!goodGrid && !warnGrid) {
+        return;
+    }
+
+    if (goodGrid && typeof synergies !== "undefined") {
+        goodGrid.innerHTML = "";
+        synergies.forEach(item => {
+            const card = document.createElement("article");
+            card.className = "assoc-card good";
+            card.innerHTML = assocCardHTML(item, "good");
+            goodGrid.appendChild(card);
+        });
+    }
+
+    if (warnGrid && typeof warnings !== "undefined") {
+        warnGrid.innerHTML = "";
+        warnings.forEach(item => {
+            const card = document.createElement("article");
+            card.className = "assoc-card warn";
+            card.innerHTML = assocCardHTML(item, "warn");
+            warnGrid.appendChild(card);
+        });
+    }
+}
+
+function renderFoodAssociations(food) {
+
+    const box = $$("modalAssociations");
+    if (!box) {
+        return;
+    }
+
+    const { good, warn } = getFoodAssociations(food.name);
+
+    let html = "";
+
+    if (good.length > 0) {
+        html += `<h4>✅ Associations qui améliorent l'absorption</h4>`;
+        html += good.map(a => `
+            <div class="modal-association-item good">
+                <span class="icon">✓</span>
+                <div>
+                    <strong>${a.a} + ${a.b}</strong><br>
+                    ${a.why}
+                </div>
+            </div>
+        `).join("");
+    }
+
+    if (warn.length > 0) {
+        html += `<h4>⚠️ Gênes d'absorption à surveiller</h4>`;
+        html += warn.map(a => `
+            <div class="modal-association-item warn">
+                <span class="icon">!</span>
+                <div>
+                    <strong>${a.a} + ${a.b}</strong><br>
+                    ${a.why}
+                </div>
+            </div>
+        `).join("");
+    }
+
+    box.innerHTML = html;
+    box.style.display = html ? "block" : "none";
+}
+
 /* ---------- FILTRES VITAMINES ---------- */
 
 function syncVitaminFilterButtons() {
@@ -271,6 +381,9 @@ function initPage() {
     }
     if (hasGuide) {
         renderVitaminGuide();
+    }
+    if ($$("assocGoodGrid") || $$("assocWarnGrid")) {
+        renderAssociations();
     }
 
     // Statistiques globales

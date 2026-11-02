@@ -14,7 +14,7 @@ https://hamiche0808.github.io/nutrivita/
 
 | Page | Description |
 |---|---|
-| `index.html` | Accueil : recherche, filtres, 50 fiches aliments |
+| `index.html` | Accueil : recherche, filtres, 58 aliments, guide des associations |
 | `vitamines.html` | Guide des 12 vitamines + filtrage des aliments |
 | `a-propos.html` | Mission du projet + contact |
 | `mentions-legales.html` | Mentions légales (éditeur, hébergement, RGPD) |
@@ -33,9 +33,12 @@ nutrivita/
 ├── sitemap.xml           # Plan du site (SEO)
 ├── .nojekyll             # Désactive Jekyll (GitHub Pages)
 ├── css/
-│   └── style.css         # Styles partagés
+│   ├── style.css         # Styles partagés
+│   └── associations.css  # Style du guide des associations
 ├── js/
 │   ├── data.js           # Base de données (50 aliments, 12 vitamines)
+│   ├── data-legumes-secs.js  # Légumes secs (8 aliments) - v1.1
+│   ├── associations.js   # Synergies ✅ et incompatibilités ⚠️ - v1.1
 │   └── main.js           # Logique partagée (filtres, modale, rendu)
 └── assets/
     ├── favicon.svg       # Favicon vectoriel
