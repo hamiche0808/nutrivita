@@ -42,7 +42,16 @@ nutrivita/
 │   └── main.js           # Logique partagée (filtres, modale, rendu)
 └── assets/
     ├── favicon.svg       # Favicon vectoriel
-    └── og-image.jpg      # Image de partage réseaux sociaux
+    ├── og-image.jpg      # Image de partage réseaux sociaux
+    └── legumes-secs/     # Photos libres de droits des 8 legumes secs - v1.1.4
+        ├── lentilles-vertes.webp   # Pexels 6086414 - Eva Bronzini
+        ├── lentilles-corail.webp   # Pexels 34940649 - Anshu Kumar
+        ├── pois-chiches.webp       # Pexels 34949284 - Mustafa Akin
+        ├── haricots-rouges.webp    # Pexels 6316675 - Arina Krasnikova
+        ├── pois-casses.jpg         # StockSnap CC0 - Tim Sullivan
+        ├── flageolets.jpg          # Wikimedia Commons CC0 - Oreo Priest
+        ├── feves.webp              # Pexels 7792149 - Ilaria M
+        └── haricots-blancs.webp    # Pexels 36498028 - Mustafa Akin
 ```
 
 ## 🛠️ Technologies

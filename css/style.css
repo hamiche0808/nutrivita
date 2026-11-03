@@ -982,3 +982,38 @@ svg {
         grid-template-columns: 1fr;
     }
 }
+
+/* =========================================
+   Photos legumes secs (v1.1.4)
+========================================= */
+
+/* Les photos couvrent toute la zone visuelle de la carte */
+.food-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.food-card:hover .food-img {
+    transform: scale(1.06);
+}
+
+/* Le badge de categorie reste visible au-dessus de la photo */
+.food-visual .food-category {
+    z-index: 2;
+}
+
+/* Photo large et propre dans la modale */
+.modal-emoji-photo {
+    width: 300px;
+    max-width: 90%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 14px;
+    display: inline-block;
+    box-shadow: 0 10px 26px rgba(37, 76, 49, 0.18);
+}
+

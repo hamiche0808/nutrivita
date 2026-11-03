@@ -60,7 +60,9 @@ function foodCardHTML(food) {
     return `
         <div class="food-visual">
             <span class="food-category">${food.category}</span>
-            <span class="food-emoji">${food.emoji}</span>
+            ${food.img
+                ? `<img class="food-img" src="${food.img}" alt="${food.alt || food.name}" loading="lazy">`
+                : `<span class="food-emoji">${food.emoji}</span>`}
         </div>
 
         <div class="food-content">
@@ -151,7 +153,12 @@ function openModal(foodId) {
         return;
     }
 
-    $$("modalEmoji").textContent = food.emoji;
+    const emojiEl = $$("modalEmoji");
+    if (food.img) {
+        emojiEl.innerHTML = `<img class="modal-emoji-img modal-emoji-photo" src="${food.img}" alt="${food.alt || food.name}">`;
+    } else {
+        emojiEl.textContent = food.emoji;
+    }
     $$("modalTitle").textContent = food.name;
     $$("modalDescription").textContent = food.description;
     $$("modalBenefits").innerHTML = food.benefits

@@ -1,4 +1,4 @@
-/* =========================================================
+﻿/* =========================================================
    NutriVita v1.1 — Légumes secs (8 aliments)
    Complète la base « foods » définie dans data.js
 ========================================================= */
@@ -8,6 +8,7 @@ foods.push(
     {
         id: 51,
         name: "Lentilles vertes",
+        img: "assets/legumes-secs/lentilles-vertes.webp",  alt: "Lentilles vertes seches, pile de legumineuses vue rapprochee",
         emoji: "🥣",
         category: "Légume sec",
         vitamins: ["B1", "B9", "B6"],
@@ -25,6 +26,7 @@ foods.push(
     {
         id: 52,
         name: "Lentilles corail",
+        img: "assets/legumes-secs/lentilles-corail.webp",  alt: "Pile de lentilles corail seches de couleur orange",
         emoji: "🍛",
         category: "Légume sec",
         vitamins: ["B1", "B9", "B6"],
@@ -42,6 +44,7 @@ foods.push(
     {
         id: 53,
         name: "Pois chiches",
+        img: "assets/legumes-secs/pois-chiches.webp",  alt: "Pois chiches secs entiers, vue rapprochee granuleuse",
         emoji: "🌰",
         category: "Légume sec",
         vitamins: ["B6", "B9", "B5"],
@@ -59,6 +62,7 @@ foods.push(
     {
         id: 54,
         name: "Haricots rouges",
+        img: "assets/legumes-secs/haricots-rouges.webp",  alt: "Haricots rouges secs (kidney beans) riches en fer",
         emoji: "🫘",
         category: "Légume sec",
         vitamins: ["B1", "B9", "B6"],
@@ -76,6 +80,7 @@ foods.push(
     {
         id: 55,
         name: "Pois cassés",
+        img: "assets/legumes-secs/pois-casses.jpg",  alt: "Pois casses verts seches fendus, specialite soupe",
         emoji: "🍲",
         category: "Légume sec",
         vitamins: ["B1", "B9", "B6"],
@@ -93,6 +98,7 @@ foods.push(
     {
         id: 56,
         name: "Flageolets",
+        img: "assets/legumes-secs/flageolets.jpg",  alt: "Flageolets verts dans un bol, legume sec francais",
         emoji: "🫒",
         category: "Légume sec",
         vitamins: ["B9", "B1", "B2"],
@@ -110,6 +116,7 @@ foods.push(
     {
         id: 57,
         name: "Fèves",
+        img: "assets/legumes-secs/feves.webp",  alt: "Feves vertes fraiches aux gros grains aplatis",
         emoji: "🫛",
         category: "Légume sec",
         vitamins: ["B9", "K", "B1"],
@@ -127,6 +134,7 @@ foods.push(
     {
         id: 58,
         name: "Haricots blancs",
+        img: "assets/legumes-secs/haricots-blancs.webp",  alt: "Haricots blancs secs (cannelini), texture de grains laiteux",
         emoji: "🍚",
         category: "Légume sec",
         vitamins: ["B9", "B1", "B6"],
